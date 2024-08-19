@@ -20,6 +20,7 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // console.log('Form Data:', formData)
     try {
       dispatch(signInStart());
       const res = await fetch('/api/auth/signin', {
@@ -55,7 +56,7 @@ const SignIn = () => {
 
       <div className='flex gap-2 mt-5'>
         <p>Dont Have an account?</p>
-        <Link to={'/sign-in'}>
+        <Link to={'/sign-up'}>
         <span className='text-blue-700'>Sign up</span>
         </Link>
       </div>
